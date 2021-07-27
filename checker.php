@@ -36,9 +36,9 @@ while (1) {
         'upgrade-insecure-requests: 1',
         'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/84.0.4147.105 Safari/537.36',
     ]);
+    wlog("requesting... $site");
     $response = curl_exec($curl);
     if ($error = curl_errno($curl)) {
-        wlog("requesting... $site");
         wlog("ErrorCode: #$error,", ' httpCode:', curl_getinfo($curl, CURLINFO_HTTP_CODE), " reason:", curl_error($curl), 'last ip: ', curl_getinfo($curl, CURLINFO_PRIMARY_IP));
         wlog('response: ' . $response);
     }
