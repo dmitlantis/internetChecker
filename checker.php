@@ -3,11 +3,10 @@
 const SITES
 = [
     'ya.ru',
-    'vk.com',
+    'vk.com/dev/constant_version_updates',
     'slack.com',
-    'aliexpress.ru',
     'whatsapp.com',
-    't.me',
+    'github.com'
 ];
 
 const CYCLE = 2;
@@ -22,7 +21,7 @@ function wlog(...$args)
 
 while (1) {
     $site = SITES[$index % count(SITES)];
-    curl_setopt($curl, CURLOPT_URL, "http://$site/");
+    curl_setopt($curl, CURLOPT_URL, "http://$site");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
     curl_setopt($curl, CURLOPT_TIMEOUT, 5);
     curl_setopt($curl, CURLOPT_HTTPHEADER, [
