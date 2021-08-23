@@ -24,6 +24,7 @@ while (1) {
     $site = SITES[$index % count(SITES)];
     curl_setopt($curl, CURLOPT_URL, "http://$site/");
     curl_setopt($curl, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($curl, CURLOPT_TIMEOUT, 5);
     curl_setopt($curl, CURLOPT_HTTPHEADER, [
         'accept-encoding: gzip, deflate, br',
         'accept-language: ru-RU,ru;q=0.9,en-US;q=0.8,en;q=0.7',
