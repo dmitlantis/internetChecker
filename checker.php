@@ -5,8 +5,10 @@ const SITES
     'ya.ru',
     'vk.com/dev/constant_version_updates',
     'slack.com',
-    'whatsapp.com',
-    'github.com'
+    'dev.mysql.com',
+    'github.com',
+    'www.cyberciti.biz',
+    'stackoverflow.com',
 ];
 
 const CYCLE = 2;
